@@ -38,6 +38,7 @@ function parse_data(json) {
 			parsed_content["main"] = { type: "html", content: el_content };
 			parsed_content["camera"] = page.camera;
 			parsed_content["location"] = page.location;
+			parsed_content["message"] = page.message;
 			if (page.color) {
 				parsed_content["color"] = page.color;
 			}

@@ -16,21 +16,25 @@ class PhotoView {
 			source.src = img_src;
 			source.type = "video/mp4";
 			img.appendChild(source);
-		} else {
+		} else if (img_src.includes(".jpg")) {
 			img = document.createElement("img");
 			img.src = img_src;
+		} else if (img_src.includes(".svg")) {
+			img = document.createElement("object");
+			img.data = img_src;
+		} else {
+			img = document.createElement("div");
 		}
 
 		this.img = img;
 		this.img.classList.add("PhotoView_img");
 
-		if (content.main.type == "text") {
-			this.content = document.createElement("p");
-			this.content.classList.add("PhotoView_content");
-			this.content.innerHTML = content.main.content;
-		} else {
-			this.content = content.main.content;
-		}
+		this.message = document.createElement("div");
+		this.message.classList.add("PhotoView_container");
+		this.message.innerHTML = content.message.text;
+
+		this.content = content.main.content;
+		this.content.classList.add("right_margin");
 
 		this.footer_left = document.createElement("div");
 		this.footer_right = document.createElement("div");
@@ -48,13 +52,20 @@ class PhotoView {
 			this.footer_left.style.color = content.color;
 			this.footer_right.style.color = content.color;
 		}
+		// this.img.style.width = "50%";
+		this.img_container = document.createElement("div");
+		this.img_container.style.width = "100%";
+		this.img_container.classList.add("image-container");
+		this.img.style.width = "50%";
+		this.img_container.appendChild(this.img);
+
+		this.content.appendChild(this.img_container);
 		this.separator.appendChild(this.content);
-		this.container.appendChild(this.img);
+		this.container.appendChild(this.message);
 		this.container.appendChild(this.footer_left);
 		this.container.appendChild(this.footer_right);
 		this.separator.appendChild(this.container);
 		this.line_separator = document.createElement("hr");
-		this.separator.appendChild(this.line_separator);
 		parent.appendChild(this.separator);
 	}
 }

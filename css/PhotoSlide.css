@@ -21,6 +21,11 @@
 	font-size: 20px;
 }
 
+.right_margin {
+	border-right: lightgray solid 1px;
+	padding-right: 100px !important;
+}
+
 .PhotoView_separator {
 	display: block;
 	position: relative;
@@ -41,9 +46,9 @@
 	position: relative;
 	text-align: center;
 	color: black;
-	width: 60%;
 	padding: 0;
 	margin: 10px;
+	float: left;
 }
 .PhotoView_container2 {
 	display: inline-block;
@@ -80,6 +85,10 @@
 	-ms-transform: translate(-50%, -50%);
 	transform: translate(-50%, -50%);
 	width: 90%;
+}
+.image-container {
+	display: flex;
+	justify-content: center;
 }
 .PhotoView_centering_container_mosaic {
 	margin: 0;
@@ -200,6 +209,10 @@ hr {
 	width: 60%;
 }
 @media only screen and (max-width: 768px) {
+	.right_margin {
+		border-right: lightgray solid 0px;
+		padding-right: 0 !important;
+	}
 	.PhotoView_container {
 		width: 100%;
 		margin: 0px;
