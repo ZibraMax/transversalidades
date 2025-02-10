@@ -1,10 +1,10 @@
 name: Deploy GitHub Pages
 on: push
 jobs:
-  build:
+    build:
         permissions:
-        id-token: write
-        pages: write
+            id-token: write
+            pages: write
         runs-on: ubuntu-latest
         steps:
             - name: Checkout repository
@@ -22,9 +22,9 @@ jobs:
                   path: ./build_outputs_folder/
     # Deployment job
     deploy:
-      
-        id-token: write
-        pages: write
+        permissions:
+            id-token: write
+            pages: write
         environment:
             name: github-pages
             url: ${{ steps.deployment.outputs.page_url }}
