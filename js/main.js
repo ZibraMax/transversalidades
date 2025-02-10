@@ -1,2 +1,2 @@
-const apiKey = import.meta.env.HELIOS;
+const apiKey = import.meta.env;
 console.log(apiKey);
