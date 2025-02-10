@@ -10,7 +10,7 @@ body {
 .wip {
   position: relative;
   max-width: 1980px;
-  height: 800px;
+  height: 100%;
   align-content: center;
   text-align: center;
   align-items: center;
