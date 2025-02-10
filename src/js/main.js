@@ -1,8 +1,13 @@
-import { PhotoView, TitleView, MosaicView, NPhotoView } from './PhotoSlide.js';
+import {
+  PhotoView,
+  TitleView,
+  MosaicView,
+  NPhotoView,
+} from 'src/js/PhotoSlide.js';
 
-import pastel from '../resources/images/pastel.png';
-import video from '../resources/images/video.mp4';
-import voice from '../resources/Voice 176.m4a';
+import pastel from 'src/resources/images/pastel.png';
+import video from 'src/resources/images/video.mp4';
+import voice from 'src/resources/Voice 176.m4a';
 
 const parent = document.getElementById('page_content');
 parent.style.display = 'none';

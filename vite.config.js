@@ -3,12 +3,12 @@ import { resolve } from 'path';
 
 export default defineConfig({
   publicDir: 'public',
-  root: './',
+  base: '',
   build: {
     outDir: 'dist',
     rollupOptions: {
       input: {
-        main: resolve(__dirname, 'index.html'),
+        main: resolve(__dirname, 'index.html/'),
       },
       output: {
         manualChunks(id) {
@@ -26,4 +26,12 @@ export default defineConfig({
     minify: 'esbuild',
   },
   plugins: [],
+  resolve: {
+    alias: {
+      src: '/src',
+      components: '/src/components',
+      assets: '/src/assets',
+      lib: '/src/lib',
+    },
+  },
 });
