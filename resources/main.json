@@ -1,0 +1,34 @@
+{
+	"title": "Transversalidades",
+	"content": [
+		{
+			"type": "photo_view",
+			"img_src": "./resources/images/WIPBG.jpg",
+			"camera": "",
+			"location": "",
+			"contents": [
+				{
+					"title": "11/02/2025",
+					"text": "Si estás viendo esta página es porque recibiste una postal!"
+				},
+				{ "title": "", "text": "Esta es la historia de mi viaje" },
+				{
+					"title": "",
+					"text": "Puedes hacer click en cualquier foto para ampliarla"
+				},
+				{
+					"title": "",
+					"text": "Desliza para ver las fotos! Cuando veas el botón <i class=\"fa fa-play-circle\" aria-hidden=\"true\"></i> púlsalo para escuchar los audios. ¡Recuerda subir el volumen!"
+				},
+				{
+					"title": "",
+					"text": "Hay un par de videos, para activar el audio de los videos has click sobre el video"
+				},
+				{
+					"title": "",
+					"text": "Se puede ver en celular o computador. ¡Yo prefiero verlo en un computador!"
+				}
+			]
+		}
+	]
+}
