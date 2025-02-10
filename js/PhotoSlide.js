@@ -9,9 +9,6 @@ class PhotoView {
 		var img;
 		if (img_src.includes(".mp4")) {
 			img = document.createElement("video");
-			img.autoplay = true;
-			img.loop = true;
-			img.muted = true;
 			const source = document.createElement("source");
 			source.src = img_src;
 			source.type = "video/mp4";
