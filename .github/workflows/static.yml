@@ -1,7 +1,7 @@
 name: Deploy GitHub Pages
 on: push
 jobs:
-    deploy:
+    build:
         runs-on: ubuntu-latest
         steps:
             - name: Checkout repository
@@ -10,5 +10,19 @@ jobs:
             - name: Inject secret into JavaScript file
               run: echo "const API_KEY = '${{ secrets.HELIOS }}';" > secret.js
 
+            - name: Upload static files as artifact
+              id: deployment
+              uses: actions/upload-pages-artifact@v3 # or specific "vX.X.X" version tag for this action
+              with:
+                  path: build_outputs_folder/
+    # Deployment job
+    deploy:
+        environment:
+            name: github-pages
+            url: ${{ steps.deployment.outputs.page_url }}
+        runs-on: ubuntu-latest
+        needs: build
+        steps:
             - name: Deploy to GitHub Pages
-              uses: actions/upload-pages-artifact@v2
+              id: deployment
+              uses: actions/deploy-pages@v4
