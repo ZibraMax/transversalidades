@@ -1,0 +1,109 @@
+body {
+  font-family: 'Courier New', Courier, monospace;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  height: 100vh;
+}
+
+.wip {
+  position: relative;
+  max-width: 1980px;
+  height: 800px;
+  align-content: center;
+  text-align: center;
+  align-items: center;
+}
+.top-left {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+  text-align: left;
+}
+#fullpage {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-size: contain;
+  background-repeat: no-repeat no-repeat;
+  background-position: center center;
+  background-color: #000000a1;
+}
+.exit_button {
+  position: fixed;
+  top: 35px;
+  right: 50px;
+  scale: 200%;
+  color: white;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 1em 1em;
+  border-radius: 1em;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.inputfield {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1em;
+}
+
+.input {
+  height: 2em;
+  width: 2em;
+  border: 2px solid #00a2ff;
+  border-radius: 0.5em;
+  text-align: center;
+  font-size: 1.5em;
+  transition: border 0.3s;
+  margin: 3px;
+}
+
+.input:focus {
+  border: 3px solid #4715fc;
+}
+
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+#submit {
+  background-color: #008cff;
+  border: none;
+  font-size: 1em;
+  padding: 0.8em 3em;
+  color: #fff;
+  border-radius: 2em;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#submit:hover {
+  background-color: #410cff;
+}
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
+.input:disabled {
+  color: #a3a3a3;
+}
