@@ -9,10 +9,14 @@ jobs:
 
             - name: Inject secret into JavaScript file
               run: echo "const API_KEY = '${{ secrets.HELIOS }}';" > secret.js
+            - name: Create folder
+              run: mkdir build_outputs_folder
 
             - name: Upload static files as artifact
               id: deployment
               uses: actions/upload-pages-artifact@v3 # or specific "vX.X.X" version tag for this action
+              with:
+                  path: ./build_outputs_folder/
     # Deployment job
     deploy:
         environment:
