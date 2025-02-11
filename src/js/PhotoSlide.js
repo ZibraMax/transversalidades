@@ -9,9 +9,9 @@ class PhotoView {
     var img;
     if (img_src.includes('.mp4')) {
       img = document.createElement('video');
-      img.id = 'video';
       const source = document.createElement('source');
       source.src = img_src;
+      source.id = 'video';
       source.type = 'video/mp4';
       img.appendChild(source);
     } else if (img_src.includes('.jpg')) {
