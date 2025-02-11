@@ -7,6 +7,16 @@ body {
   height: 100vh;
 }
 
+@font-face {
+  font-family: 'Nikkarsurea'; /*a name to be used later*/
+  src: url('src/resources/Nikkarsurea.ttf') format('truetype'); /*URL to font*/
+}
+
+.nika {
+  font-family: 'Nikkarsurea';
+  white-space: pre-wrap;
+}
+
 .wip {
   position: relative;
   max-width: 1980px;
