@@ -217,8 +217,15 @@ const validateOTP = () => {
 // Submit
 submitButton.addEventListener('click', validateOTP);
 
+function loadVideo() {
+  const videoel = document.getElementById('video');
+  //set source of cideo element
+  videoel.src = video;
+}
+
 // Start
 const startInput = () => {
+  loadVideo();
   inputCount = 0;
   finalInput = '';
   input.forEach((element) => {
