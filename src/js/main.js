@@ -7,7 +7,7 @@ import {
 
 import pastel from 'src/resources/images/pastel.png';
 import video from 'src/resources/images/video.mp4';
-import voice from 'src/resources/Voice 176.m4a';
+import voice from 'src/resources/Voice 176.mp3';
 
 const parent = document.getElementById('page_content');
 parent.style.display = 'none';
