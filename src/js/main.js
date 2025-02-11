@@ -39,7 +39,7 @@ const jsonData = {
       location: '',
       contents: [{ title: '<i><u>09/02/2025</u></i>', text: '' }],
       message: {
-        text: 'Extra, dale click a la imagen. <a class="nika" href="https://zibramax.github.io/Nika/">Pudiste escuchar el cassette?</a>',
+        text: 'Extra, dale click a la imagen. <br><br><a class="nika" href="https://zibramax.github.io/Nika/">Pudiste escuchar el cassette?</a>',
       },
     },
   ],
