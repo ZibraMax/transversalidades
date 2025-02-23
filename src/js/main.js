@@ -10,7 +10,6 @@ import video from 'src/resources/images/video.mp4';
 import voice from 'src/resources/Voice 176.mp3';
 
 const parent = document.getElementById('page_content');
-parent.style.display = 'none';
 
 const container = document.getElementById('container');
 
@@ -199,7 +198,7 @@ window.addEventListener('keyup', (e) => {
     }
   }
 });
-
+container.style.display = 'none';
 const validateOTP = () => {
   if (finalInput == import.meta.env.VITE_HELIOS) {
     parent.style.display = 'block';
